@@ -1,0 +1,13 @@
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+   <Bundle Name="HelloCSharpConsole" 
+           Version="0.0.0" 
+           UpgradeCode="E7624440-6F0A-49C0-B5C5-8AFD3B2A5166" 
+           Manufacturer="Lou Parslow" >
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
+    <Chain>
+      <PackageGroupRef Id="NetFx452Web"/>
+      <MsiPackage
+        SourceFile="HelloCSharpConsole-0.0.0.msi" />
+    </Chain>
+  </Bundle>
+</Wix>
