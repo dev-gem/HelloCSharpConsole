@@ -9,6 +9,11 @@
       <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
       <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
  
+      <PropertyRef Id="WIX_IS_NETFRAMEWORK_46_OR_LATER_INSTALLED"/>
+      <Condition Message='This setup requires the .NET Framework 4.6 installed.'>
+        <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_46_OR_LATER_INSTALLED]]>
+      </Condition>
+      
       <Directory Id="TARGETDIR" Name="SourceDir">
          <Directory Id="ProgramFilesFolder">
             <Directory Id="INSTALLDIR" Name="HelloCSharpConsole">
